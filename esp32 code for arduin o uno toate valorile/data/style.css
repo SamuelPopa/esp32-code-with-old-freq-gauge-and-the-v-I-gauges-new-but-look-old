@@ -1,0 +1,38 @@
+body {
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+  background: #f4f4f4;
+}
+
+.container {
+  background: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin: 20px;
+  padding: 20px;
+}
+
+.gauges-row {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin: 20px 0;
+}
+
+.gauge-container {
+  width: 300px;
+  height: 300px;
+}
+
+input[type="number"] {
+  width: 100px;
+}
+
+#phaseDiagramContainer {
+  text-align: center;
+}
+
+#phaseDiagram {
+  display: inline-block;
+}

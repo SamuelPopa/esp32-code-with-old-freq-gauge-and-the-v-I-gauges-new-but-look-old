@@ -1,0 +1,77 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+    <title>DSP Data Viewer</title>
+    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/raphael/2.3.0/raphael.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/justgage"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/justgage/1.6.1/justgage.min.js" integrity="sha512-QeISJM4NCnUgZl5++o/2d4FwppF+Hh62RbNeA9paupnQvq5KAVvf2ZN3KD99EDoqcSHi1kbG13JMyRXDKBQBSw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highcharts/11.4.0/highcharts.js" integrity="sha512-8TTeb9L1dC4nfXg/eSMBpIqsuUSpWChW/HK4M+IfWmC9O5TVYkMhwiCQd/IlmdzznUQAiQprHTMpP3ye4Ab7Lw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highcharts/11.4.0/highcharts-more.min.js" integrity="sha512-rAXXnwMYKNeK+0kBbnncbyW5SEJH15Xr8yR+iEcyZfjYob6hem7lb6FInWETS3i455VPw6gqc43AgCMvUvq1og==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highcharts/11.4.0/modules/solid-gauge.src.min.js" integrity="sha512-xnCx7m/nrffYYFvdj1QN8evVfrTRoTqBLuMUqXddIleHGENu+7PMlfJDLZb02c14dh7dBhlqDvnjSmcbHNsK1w==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+    <div id="generalInfo" class="container">
+        <h2>Informatii Generale</h2>
+        <p class="value">ID: <span id="ID">N/A</span></p>
+        <p class="value">CTR: <span id="CTR">N/A</span></p>
+        <p class="value">Frequency: <span id="fHz">N/A</span> Hz</p>
+        
+        <p class="value">InullA: <span id="InullA">N/A</span></p>
+        <p class="value">Isum: <span id="Isum">N/A</span></p>
+        <label for="standardCurrent">Val. Nat Curent:</label>
+        <input type="number" id="standardCurrent" name="standardCurrent" value="230">
+        <div id="container-frequency"></div>
+    </div>
+
+        <style>
+       
+        #container-frequency {
+            width: 384px;
+            height: 184px;
+        
+        }
+    </style>
+
+    <div class="gauges-row">
+        <div id="container-voltage" class="gauge-container"></div>
+        <div id="container2-voltage2" class="gauge-container"></div>
+        <div id="container3-voltage3" class="gauge-container"></div>
+        <div>
+            <p>Eroare Tensiune 1 %: <span id="percentage1">N/A</span></p>
+            <p>Eroare Tensiune 2 %: <span id="percentage2">N/A</span></p>
+            <p>Eroare Tensiune 3 %: <span id="percentage3">N/A</span></p>
+            <label for="maxPercentage">Max Eroare Tensiune %:</label>
+            <input type="text" id="maxPercentage" name="maxPercentage" readonly>
+        </div>
+    </div>
+
+    <div class="gauges-row">
+        <div id="container-current" class="gauge-container"></div>
+        <div id="container2-current2" class="gauge-container"></div>
+        <div id="container3-current3" class="gauge-container"></div>
+        <div id="container-inull" class="gauge-container"></div>
+    </div>
+
+    <div class="gauges-row">
+        <div id="container-Pf" class="gauge-container"></div>
+        <div id="container2-Pf2" class="gauge-container"></div>
+        <div id="container3-Pf3" class="gauge-container"></div>
+    </div>
+
+    <div class="gauges-row">
+        <div id="containerPW" class="gauge-container"></div>
+        <div id="containerPVAR1" class="gauge-container"></div>
+        <div id="containerungifaze" class="gauge-container"></div>
+    </div>
+
+    <div id="phaseDiagramContainer" class="container">
+        <h2>Diagrama fazelor</h2>
+        <canvas id="phaseDiagram" width="300" height="300"></canvas>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>

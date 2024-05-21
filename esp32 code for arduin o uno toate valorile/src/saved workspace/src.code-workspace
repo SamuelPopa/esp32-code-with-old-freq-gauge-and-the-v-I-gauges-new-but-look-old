@@ -1,0 +1,24 @@
+{
+	"folders": [
+		{
+			"path": "../../../../licienta test 2 arduino uno and esp32/arduino uno test 3 cu toate datele/arduino test 02 cu tate datele/src"
+		},
+		{
+			"name": "arduino uno cod pt toate datele 4",
+			"path": "../../../../arduino uno toate datele 4/arduino uno cod pt toate datele 4"
+		},
+		{
+			"name": "esp32 and arduino uno test2",
+			"path": "../../../../licienta test 2 arduino uno and esp32/esp32 and arduino uno test2"
+		},
+		{
+			"name": "esp32 code for arduin o uno toate valorile",
+			"path": "../.."
+		},
+		{
+			"name": "esp32 test for gauges and graphs",
+			"path": "../../../../esp32 test for gauges and graphs"
+		}
+	],
+	"settings": {}
+}
